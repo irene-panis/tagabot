@@ -8,6 +8,9 @@ I made this bot to solve a really niche problem that we had: we have a collabora
 
 ![image](https://github.com/irene-panis/tagabot/assets/65985104/0d60e35d-18f1-418d-ab95-8fca3ac16ad4)
 
+## Improvements
+There are definitely ways to improve the flow of the app; right now I'm running the entire authorization/authentication flow every time the app launches which is obviously a hassle. Ideally I'd want to slash this and instead implement a system where the application can remember a user that has authorized it and be able to grab the correct access/refresh tokens for that user, so that the user only has to authorize once and be done with it. I am also considering implementing a check for if an access token is still valid so that the app doesn't have to refresh the token as much-- this would help in situations where requests are being made more than once per hour. At the end of the day it's still a pretty small and simple application that is only being used in one Discord server so I'm not too concerned about making it perfect just yet.
+
 ## Technologies Used
 - Node.js
 - Express.js to handle server and read user auth
