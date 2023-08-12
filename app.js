@@ -18,12 +18,13 @@ const PLAYLIST_ID = process.env.PLAYLIST_ID;
 const CLIENT_ID = process.env.SPOTIFY_CLIENT;
 const CLIENT_SECRET = process.env.SPOTIFY_SECRET;
 const SCOPES = ['playlist-modify-public', 'playlist-modify-private', 'user-read-private', 'user-read-email'];
+const REDIRECT_URI = process.env.REDIRECT_URI;
 
 // spotify api obj
 const spotify = new SpotifyWebApi({
   clientId: CLIENT_ID,
   clientSecret: CLIENT_SECRET,
-  redirectUri: 'http://localhost:3000/auth-callback',
+  redirectUri: REDIRECT_URI,
   scope: SCOPES
 });
 
